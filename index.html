@@ -8,28 +8,49 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
-    <div class="wrapper">
+    <div>
       <header>
-        <h1>Code Quiz</h1>
+          <div class="viewhighscores">
+            <a href="./viewhighscores.html">View high scores</a>
+          </div>
+        <div class="timer">
+            <p>Time: </p>
+        </div>
       </header>
-      <div class="card">
-        <div class="card-header">
-          <h2>Code Quiz</h2>
-        </div>
-        <div class="card-body">
-          <textarea
-            readonly
-            id="password"
-            placeholder="Your Secure Password"
-            aria-label="Generated Password"
-          ></textarea>
-        </div>
-        <div class="card-footer">
-          <!-- <button id="generate" class="btn">Generate Password</button> -->
-          <button id="generate" class="btn" onclick="startQuiz()">Submit</button>
-        </div>
-      </div>
     </div>
+
+    <main class="page-content" id="page-content">
+    <!--Here goes the first page of the application-->
+    <div class="title-area" id="initial-page">
+        <h1 id="page-title">Coding Quiz Challenge</h1>
+        <p>Try to answer the following code-related questions within the time limit. Keep in mind that the incorrect answers will penalize the score/time by 10 seconds.</p>
+        <button class="btn" onclick="addQuestion()" type="submit">Start Quiz</button>
+            <!--Main dynamic content-->
+    </div>
+    <!--End of first page of the application-->
+    <div id="wrapper" class="wrapper">
+        <ul class="question-list" id = "questions-to-select">
+            <li class="list-item">A task is going to be added soon!</li>
+        </ul>
+    </div>
+
+
+
+
+
+
+        <!--Here goes the last page of the application-->
+        <div id="last-page" class="show-and-hide-section">
+            <h1 id="page-title" class="title-area">All done!</h1>
+            <p class="title-area>">Your final score is ""</p>
+            <p>Enter initials:</p>
+            <input type="text" placeholder=""/>
+            <button class="btn" id="submitbutton" type="submit" draggable="false">Submit</button>
+        </div>
+        <!--End of last page of the application-->
+
+    </main>
+
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
